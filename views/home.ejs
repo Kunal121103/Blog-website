@@ -1,0 +1,18 @@
+<%- include(`partials/header.ejs`) %>
+
+    <h1>Home</h1>
+
+    <p><%= homeStartingContent %></p>
+
+
+    <% arr.forEach(element => { %>
+        <h2><%= element.title %></h2>
+        <p>
+            <%= element.blogPost.length <= 150 ? element.blogPost : element.blogPost.substring(0, 150) + '...' %> 
+            <a href="/posts/<%= element.title %>" >Read More</a>
+        </p> 
+   <% }); %>
+
+   
+
+<!-- <%- include(`partials/footer.ejs`) %> -->
